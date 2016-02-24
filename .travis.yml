@@ -6,5 +6,4 @@ before_script:
 
 script:
   - cd program; perl nikto.pl -Plugins "robots();report_text();" -no404 -Format txt -output ./Nikto_blog.waf.red_report.txt -host "https://blog.waf.red"
-  - cd ../; php -f sendreport.php "program/Nikto_blog.waf.red_report.txt"
-  - sudo cat /var/log/mail.log
+  - curl -v -F "niktoscan=@Nikto_blog.waf.red_report.txt" https://waf.red/fromTravisCI.php
