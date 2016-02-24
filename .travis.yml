@@ -2,7 +2,7 @@ language: bash
 
 before_script:
   - echo "Install Net-SSLeay"
-  - apt-get --yes --force-yes install libnet-ssleay-perl
+  - sudo apt-get --yes --force-yes install libnet-ssleay-perl
 
 script:
   - cd program; perl nikto.pl -Help
