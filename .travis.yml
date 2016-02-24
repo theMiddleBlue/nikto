@@ -4,4 +4,4 @@ before_script:
   - echo "check Net-SSLeay"
 
 script:
-  - bash perl nikto/program/nikto.pl -Help
+  - bash perl program/nikto.pl -Help
