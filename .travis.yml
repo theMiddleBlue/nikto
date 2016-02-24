@@ -5,4 +5,4 @@ before_script:
   - sudo apt-get --yes --force-yes install libnet-ssleay-perl
 
 script:
-  - cd program; perl nikto.pl -Help
+  - cd program; perl nikto.pl -Plugins "robots()" -no404 -host "https://blog.waf.red"
