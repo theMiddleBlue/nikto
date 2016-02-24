@@ -4,4 +4,4 @@ before_script:
   - echo "check Net-SSLeay"
 
 script:
-  - cd theMiddleBlue/nikto && perl program/nikto.pl -Help
+  - cd nikto && perl program/nikto.pl -Help
