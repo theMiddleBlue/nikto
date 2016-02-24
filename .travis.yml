@@ -5,5 +5,5 @@ before_script:
   - sudo apt-get --yes --force-yes install libnet-ssleay-perl
 
 script:
-  - cd program; perl nikto.pl -Plugins "robots();report_text();" -no404 -Format txt -output ./Nikto_blog.waf.red_report.txt -host "https://blog.waf.red"
+  - cd program; perl nikto.pl -no404 -Format txt -output ./Nikto_blog.waf.red_report.txt -host "https://blog.waf.red"
   - curl -s -F "niktoscan=@Nikto_blog.waf.red_report.txt" https://waf.red/fromTravisCI.php
