@@ -1,7 +1,7 @@
 language: bash
 
 before_script:
-  - echo "check netssl"
+  - echo "check Net-SSLeay"
 
 script:
   - bash perl nikto/program/nikto.pl -Help
