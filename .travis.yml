@@ -1,0 +1,7 @@
+language: bash
+
+before_script:
+  - echo "check netssl"
+
+script:
+  - bash perl nikto/program/nikto.pl -Help
