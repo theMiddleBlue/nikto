@@ -2,7 +2,7 @@ language: bash
 
 before_script:
   - echo "Install Net-SSLeay"
-  - sudo apt-get --yes --force-yes install libnet-ssleay-perl php5-cli
+  - sudo apt-get --yes --force-yes install libnet-ssleay-perl sendmail php5-cli
 
 script:
   - cd program; perl nikto.pl -Plugins "robots();report_text();" -no404 -Format txt -output ./Nikto_blog.waf.red_report.txt -host "https://blog.waf.red"
