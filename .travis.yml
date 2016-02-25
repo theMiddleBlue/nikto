@@ -6,5 +6,5 @@ before_script:
 
 script:
   - cd program
-  - travis_wait perl nikto.pl -no404 -Display P -Format txt -output ./Nikto_blog.waf.red_report.txt -host "https://blog.waf.red"
-  - curl -s -F "niktoscan=@Nikto_blog.waf.red_report.txt" https://waf.red/fromTravisCI.php
+  - travis_wait perl nikto.pl -Display P -maxtime 10m -Format txt -Tuning 9 -output ./Nikto_waf.red_report.txt -host "https://waf.red"
+  - curl -s -F "niktoscan=@Nikto_waf.red_report.txt" https://waf.red/fromTravisCI.php
